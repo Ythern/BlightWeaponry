@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<!-- ===== Blight Rifle ===== -->
+     <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>BW_Gun_BlightRifle</defName>
+        <label>blight rifle</label>
+        <description>Placeholder</description>
+        <graphicData>
+            <texPath>Things/Weapons/BlightRifle</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <techLevel>Spacer</techLevel>
+        <soundInteract>Interact_Rifle</soundInteract>
+        <weaponClasses>
+            <li>RangedHeavy</li>
+        </weaponClasses>
+        <costList>
+            <ComponentSpacer>2</ComponentSpacer>
+            <Steel>60</Steel>
+            <Plasteel>60</Plasteel>
+        </costList>
+        <statBases>
+            <WorkToMake>95000</WorkToMake>
+            <MarketValue>2178</MarketValue>
+            <Mass>6</Mass>
+            <AccuracyTouch>0.60</AccuracyTouch>
+            <AccuracyShort>0.90</AccuracyShort>
+            <AccuracyMedium>0.90</AccuracyMedium>
+            <AccuracyLong>1</AccuracyLong>
+            <RangedWeapon_Cooldown>1.66</RangedWeapon_Cooldown>
+        </statBases>
+        <weaponTags>
+          <li>ScavRangedAdvanced</li>
+        </weaponTags>
+        <verbs>
+            <li>
+              <verbClass>Verb_Shoot</verbClass>
+              <hasStandardCommand>true</hasStandardCommand>
+              <defaultProjectile>BW_Bullet_BlightRifle</defaultProjectile>
+              <warmupTime>3.83</warmupTime>
+              <range>40</range>
+              <soundCast>Shot_Minigun</soundCast>
+              <soundCastTail>GunTail_Medium</soundCastTail>
+              <burstShotCount>1</burstShotCount>
+              <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+              <label>stock</label>
+              <capacities>
+                <li>Blunt</li>
+              </capacities>
+              <power>9</power>
+              <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+              <label>barrel</label>
+              <capacities>
+                <li>Blunt</li>
+                <li>Poke</li>
+              </capacities>
+              <power>9</power>
+              <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+        <recipeMaker>
+          <researchPrerequisite/>
+          <skillRequirements>
+            <Crafting>8</Crafting>
+          </skillRequirements>
+          <recipeUsers Inherit="False">
+            <li>FabricationBench</li>
+          </recipeUsers>
+          <workSkill>Crafting</workSkill>
+          <effectWorking>Smith</effectWorking>
+          <soundWorking>Recipe_Smith</soundWorking>
+        </recipeMaker>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseBullet">
+      <defName>BW_Bullet_BlightRifle</defName>
+      <label>blight rifle shot</label>
+      <projectile>
+        <damageDef>Bullet</damageDef>
+        <damageAmountBase>9</damageAmountBase>
+        <stoppingPower>1</stoppingPower>
+        <armorPenetrationBase>0.15</armorPenetrationBase>
+        <speed>70</speed>
+      </projectile>
+      <graphicData>
+        <texPath>Things/Projectile/Bullet_big</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
+      </graphicData>
+    </ThingDef>
+
+<!-- ===== Blight Shotgun ===== -->
+     <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>BW_Gun_BlightShotgun</defName>
+        <label>blight shotgun</label>
+        <description>Placeholder</description>
+        <graphicData>
+            <texPath>Things/Weapons/BlightShotgun</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <techLevel>Spacer</techLevel>
+        <soundInteract>Interact_Rifle</soundInteract>
+        <weaponClasses>
+            <li>RangedHeavy</li>
+        </weaponClasses>
+        <costList>
+            <ComponentSpacer>2</ComponentSpacer>
+            <Steel>60</Steel>
+            <Plasteel>60</Plasteel>
+        </costList>
+        <statBases>
+            <WorkToMake>30000</WorkToMake>
+            <MarketValue>1633</MarketValue>
+            <Mass>4</Mass>
+            <AccuracyTouch>0.80</AccuracyTouch>
+            <AccuracyShort>1</AccuracyShort>
+            <AccuracyMedium>1</AccuracyMedium>
+            <AccuracyLong>0.60</AccuracyLong>
+            <RangedWeapon_Cooldown>1.25</RangedWeapon_Cooldown>
+        </statBases>
+        <weaponTags>
+          <li>ScavRangedAdvanced</li>
+        </weaponTags>
+        <verbs>
+            <li>
+              <verbClass>Verb_Shoot</verbClass>
+              <hasStandardCommand>true</hasStandardCommand>
+              <defaultProjectile>BW_Bullet_BlightShotgun</defaultProjectile>
+              <warmupTime>1</warmupTime>
+              <range>20</range>
+              <soundCast>Shot_Minigun</soundCast>
+              <soundCastTail>GunTail_Medium</soundCastTail>
+              <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+              <burstShotCount>2</burstShotCount>
+              <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+              <label>stock</label>
+              <capacities>
+                <li>Blunt</li>
+              </capacities>
+              <power>9</power>
+              <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+              <label>barrel</label>
+              <capacities>
+                <li>Blunt</li>
+                <li>Poke</li>
+              </capacities>
+              <power>9</power>
+              <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+        <recipeMaker>
+          <researchPrerequisite/>
+          <skillRequirements>
+            <Crafting>8</Crafting>
+          </skillRequirements>
+          <recipeUsers Inherit="False">
+            <li>FabricationBench</li>
+          </recipeUsers>
+          <workSkill>Crafting</workSkill>
+          <effectWorking>Smith</effectWorking>
+          <soundWorking>Recipe_Smith</soundWorking>
+        </recipeMaker>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseBullet">
+      <defName>BW_Bullet_BlightShotgun</defName>
+      <label>blight shotgun shot</label>
+      <projectile>
+        <damageDef>Bullet</damageDef>
+        <damageAmountBase>5</damageAmountBase>
+        <stoppingPower>3</stoppingPower>
+        <armorPenetrationBase>0.15</armorPenetrationBase>
+        <speed>70</speed>
+      </projectile>
+      <graphicData>
+        <texPath>Things/Projectile/Bullet_big</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
+      </graphicData>
+    </ThingDef>
+
+    <!-- ===== Blight SMG ===== -->
+     <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>BW_Gun_BlightSMG</defName>
+        <label>blight smg</label>
+        <description>Placeholder</description>
+        <graphicData>
+            <texPath>Things/Weapons/BlightSMG</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <techLevel>Spacer</techLevel>
+        <soundInteract>Interact_Rifle</soundInteract>
+        <weaponClasses>
+            <li>RangedHeavy</li>
+        </weaponClasses>
+        <costList>
+            <ComponentSpacer>2</ComponentSpacer>
+            <Steel>60</Steel>
+            <Plasteel>60</Plasteel>
+        </costList>
+        <statBases>
+            <WorkToMake>30000</WorkToMake>
+            <MarketValue>1544</MarketValue>
+            <Mass>4</Mass>
+            <AccuracyTouch>0.90</AccuracyTouch>
+            <AccuracyShort>0.80</AccuracyShort>
+            <AccuracyMedium>0.55</AccuracyMedium>
+            <AccuracyLong>0.40</AccuracyLong>
+            <RangedWeapon_Cooldown>1.83</RangedWeapon_Cooldown>
+        </statBases>
+        <weaponTags>
+          <li>ScavRangedAdvanced</li>
+        </weaponTags>
+        <verbs>
+            <li>
+              <verbClass>Verb_Shoot</verbClass>
+              <hasStandardCommand>true</hasStandardCommand>
+              <defaultProjectile>BW_Bullet_BlightSMG</defaultProjectile>
+              <warmupTime>0.83</warmupTime>
+              <range>24</range>
+              <soundCast>Shot_Minigun</soundCast>
+              <soundCastTail>GunTail_Medium</soundCastTail>
+              <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+              <burstShotCount>5</burstShotCount>
+              <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+              <label>grip</label>
+              <capacities>
+                <li>Blunt</li>
+              </capacities>
+              <power>9</power>
+              <cooldownTime>2</cooldownTime>
+              <armorPenetration>0.13</armorPenetration>
+            </li>
+            <li>
+              <label>barrel</label>
+              <capacities>
+                <li>Blunt</li>
+                <li>Poke</li>
+              </capacities>
+              <power>9</power>
+              <cooldownTime>2</cooldownTime>
+              <armorPenetration>0.13</armorPenetration>
+            </li>
+        </tools>
+        <recipeMaker>
+          <researchPrerequisite/>
+          <skillRequirements>
+            <Crafting>8</Crafting>
+          </skillRequirements>
+          <recipeUsers Inherit="False">
+            <li>FabricationBench</li>
+          </recipeUsers>
+          <workSkill>Crafting</workSkill>
+          <effectWorking>Smith</effectWorking>
+          <soundWorking>Recipe_Smith</soundWorking>
+        </recipeMaker>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseBullet">
+      <defName>BW_Bullet_BlightSMG</defName>
+      <label>blight smg shot</label>
+      <projectile>
+        <damageDef>Bullet</damageDef>
+        <damageAmountBase>3</damageAmountBase>
+        <stoppingPower>0.5</stoppingPower>
+        <armorPenetrationBase>0.07</armorPenetrationBase>
+        <speed>55</speed>
+      </projectile>
+      <graphicData>
+        <texPath>Things/Projectile/Bullet_big</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
+      </graphicData>
+    </ThingDef>
+
+    <!-- ===== Blight Pistol ===== -->
+     <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>BW_Gun_BlightPistol</defName>
+        <label>blight pistol</label>
+        <description>Placeholder</description>
+        <graphicData>
+            <texPath>Things/Weapons/BlightPistol</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <techLevel>Spacer</techLevel>
+        <soundInteract>Interact_Rifle</soundInteract>
+        <weaponClasses>
+            <li>RangedHeavy</li>
+        </weaponClasses>
+        <costList>
+            <ComponentSpacer>2</ComponentSpacer>
+            <Steel>60</Steel>
+            <Plasteel>60</Plasteel>
+        </costList>
+        <statBases>
+            <WorkToMake>10000</WorkToMake>
+            <MarketValue>642</MarketValue>
+            <Mass>4</Mass>
+            <AccuracyTouch>0.90</AccuracyTouch>
+            <AccuracyShort>0.80</AccuracyShort>
+            <AccuracyMedium>0.40</AccuracyMedium>
+            <AccuracyLong>0.40</AccuracyLong>
+            <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+        </statBases>
+        <verbs>
+            <li>
+              <verbClass>Verb_Shoot</verbClass>
+              <hasStandardCommand>true</hasStandardCommand>
+              <defaultProjectile>BW_Bullet_BlightShot</defaultProjectile>
+              <warmupTime>0.33</warmupTime>
+              <range>24</range>
+              <soundCast>Shot_Minigun</soundCast>
+              <soundCastTail>GunTail_Medium</soundCastTail>
+              <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+              <burstShotCount>3</burstShotCount>
+              <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+              <label>grip</label>
+              <capacities>
+                <li>Blunt</li>
+              </capacities>
+              <power>9</power>
+              <cooldownTime>2</cooldownTime>
+              <armorPenetration>0.13</armorPenetration>
+            </li>
+            <li>
+              <label>barrel</label>
+              <capacities>
+                <li>Blunt</li>
+                <li>Poke</li>
+              </capacities>
+              <power>9</power>
+              <cooldownTime>2</cooldownTime>
+              <armorPenetration>0.13</armorPenetration>
+            </li>
+        </tools>
+        <recipeMaker>
+          <researchPrerequisite/>
+          <skillRequirements>
+            <Crafting>8</Crafting>
+          </skillRequirements>
+          <recipeUsers Inherit="False">
+            <li>FabricationBench</li>
+          </recipeUsers>
+          <workSkill>Crafting</workSkill>
+          <effectWorking>Smith</effectWorking>
+          <soundWorking>Recipe_Smith</soundWorking>
+        </recipeMaker>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseBullet">
+      <defName>BW_Bullet_BlightPistol</defName>
+      <label>blight pistol shot</label>
+      <projectile>
+        <damageDef>Bullet</damageDef>
+        <damageAmountBase>3</damageAmountBase>
+        <stoppingPower>0.5</stoppingPower>
+        <armorPenetrationBase>0.07</armorPenetrationBase>
+        <speed>45</speed>
+      </projectile>
+      <graphicData>
+        <texPath>Things/Projectile/Bullet_big</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
+      </graphicData>
+    </ThingDef>
+
+    <!-- ===== Blight Heavy Blaster ===== -->
+     <ThingDef ParentName="BaseBullet">
+    <defName>BW_Bullet_BlightHeavyBlaster</defName>
+    <label>blight heavy blaster shot</label>
+    <graphicData>
+      <texPath>Things/Projectile/Charge_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>4</damageAmountBase>
+      <speed>90</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef Abstract="True" ParentName="BaseGunWithQuality" Name="BW_Gun_BlightHeavyBlasterBase">
+    <label>heavy charge blaster</label>
+    <description>A pulse-charged rapid-fire blaster for area suppressive fire. Heavy cooling allows long, deadly bursts.</description>
+    <graphicData>
+      <texPath>Things/Weapons/BlightHeavyBlaster</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>2000</MarketValue>
+      <Mass>22</Mass>
+      <AccuracyTouch>0.20</AccuracyTouch>
+      <AccuracyShort>0.34</AccuracyShort>
+      <AccuracyMedium>0.34</AccuracyMedium>
+      <AccuracyLong>0.20</AccuracyLong>
+      <RangedWeapon_Cooldown>7.4</RangedWeapon_Cooldown>
+    </statBases>
+    <techLevel>Spacer</techLevel>
+    <tradeability>None</tradeability>
+    <destroyOnDrop>true</destroyOnDrop>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <tools>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>11.7</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+    </tools>
+    <relicChance>0</relicChance>
+  </ThingDef>
+
+  <ThingDef ParentName="BW_Gun_BlightHeavyBlasterBase">
+    <defName>BW_Gun_BlightHeavyBlaster</defName>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>BW_Bullet_BlightHeavyBlaster</defaultProjectile>
+        <warmupTime>1.25</warmupTime>
+        <range>25</range>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <burstShotCount>24</burstShotCount>
+        <soundCast>Shot_ChargeBlaster</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <weaponTags>
+      <li>MechanoidGunHeavy</li>
+    </weaponTags>
+  </ThingDef>
+
+    <!-- ===== BlightLance ===== -->
+<ThingDef ParentName="BaseGunWithQuality">
+    <defName>BW_Gun_BlightLance</defName>
+    <label>blight lance</label>
+    <description>A pulse-charged rail-assisted lance weapon. It fires a single shot at high velocity, charging it with unstable energy as it leaves the acceleration rail.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Weapons/BlightLance</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_ChargeLance</soundInteract>
+    <statBases>
+      <MarketValue>1900</MarketValue>
+      <Mass>8</Mass>
+      <AccuracyTouch>0.65</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.75</AccuracyLong>
+      <RangedWeapon_Cooldown>2.33</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>MechanoidGunMedium</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_BlightLance</defaultProjectile>
+        <warmupTime>2.33</warmupTime>
+        <range>27</range>
+        <soundCast>ChargeLance_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>BW_Bullet_BlightLance</defName>
+    <label>charge lance shot</label>
+    <graphicData>
+      <texPath>Things/Projectile/ChargeLanceShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>1.5</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>15</damageAmountBase>
+      <stoppingPower>1.5</stoppingPower>
+      <speed>120</speed>
+    </projectile>
+  </ThingDef>
+
+  <!-- Blight Needler -->
+
+  <ThingDef ParentName="BaseGun" Name="BNeedlerGunBase">
+    <defName>BW_Gun_BlightNeedler</defName>
+    <label>blight needler gun</label>
+    <description>A long-range weapon used by mechanoids. Named after its needle-like projectiles, it fires single shots with great accuracy. While it does less damage than charge weapons, it can reach over very long distances.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Weapons/BlightNeedler</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tradeability>None</tradeability>
+    <destroyOnDrop>true</destroyOnDrop>
+    <relicChance>0</relicChance>
+    <statBases>
+      <MarketValue>1900</MarketValue>
+      <Mass>2.6</Mass>
+      <AccuracyTouch>0.60</AccuracyTouch>
+      <AccuracyShort>0.80</AccuracyShort>
+      <AccuracyMedium>0.90</AccuracyMedium>
+      <AccuracyLong>0.85</AccuracyLong>
+      <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>MechanoidGunLongRange</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+      <li>LongShots</li>
+    </weaponClasses>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>BW_Bullet_BlightNeedler</defaultProjectile>
+        <warmupTime>2.33</warmupTime>
+        <range>40</range>
+        <soundCast>Shot_NeedleGun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>BW_Bullet_BlightNeedler</defName>
+    <label>needle shot</label>
+    <graphicData>
+      <texPath>Things/Projectile/Needle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.3</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>5</damageAmountBase>
+      <armorPenetrationBase>0.20</armorPenetrationBase>
+      <stoppingPower>1.5</stoppingPower>
+      <speed>90</speed>
+    </projectile>
+  </ThingDef>
+
+  <!-- Blight Knife -->
+
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>BW_MeleeWeapon_BlightKnife</defName>
+    <label>blight knife</label>
+    <techLevel>Neolithic</techLevel>
+    <description>One of mankind's oldest manufactured objects. The knife has taken many forms, but the concept has always remained the same: A handle for holding and a sharp edge for cutting.</description>
+    <graphicData>
+      <texPath>Things/Weapons/Knife</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>1.6</uiIconScale>
+    <weaponTags>
+      <li>MedievalMeleeBasic</li>
+      <li>NeolithicMeleeBasic</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>Neolithic</li>
+    </weaponClasses>
+    <costStuffCount>30</costStuffCount>
+    <statBases>
+      <WorkToMake>4000</WorkToMake>
+      <Mass>0.5</Mass>
+    </statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <burnableByRecipe>false</burnableByRecipe>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>4</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>blade</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>6</power>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>6</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <recipeMaker>
+      <recipeUsers>
+        <li>MachintingTable</li>
+      </recipeUsers>
+      <displayPriority>310</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+
+</Defs>
